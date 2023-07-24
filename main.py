@@ -128,6 +128,7 @@ st.caption("RYOE - Rush Yards Over Expected. My model, inputs: yardline, down, d
            "shotgun/pistol/under-center, # blockers*, rusher position['RB',QB','TE','WR']")
 st.caption("*Note: # Blockers- An educated guess based on personnel group."
            "I don't have tracking for where each player lined up.")
+st.caption("EPA - Expected Points Added.")
 st.caption("Success Rate - Pct of rushes on which yards gained >= yards epected.")
 st.caption("Conversion Rate - Pct of rushes on which a 1st Down was gained.")
 st.caption("Short - Rush Attempt where <= 2 yards is needed to gain a 1st Down. (3rd & 1, 2nd & 2, etc.)")
