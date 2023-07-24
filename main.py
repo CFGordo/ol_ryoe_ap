@@ -12,30 +12,34 @@ ol_ryoe = pd.read_csv(ol_ryoe_csv)
 
 
 exes =['RYOE', 'Run Blocking Snaps',
-        'AVG RYOE', '1st&10 Snaps', '1st&10 AVG RYOE', 'Short Snaps',
-       'Short AVG RYOE', 'Power Snaps', 'Power AVG RYOE', 'Team Attempts',
-       'Team RYOE', 'Team AVG RYOE', 'Team 1st&10 AVG RYOE', 'TM_short_att',
-       'Team Short AVG RYOE', 'Team Power Attempts', 'Team Power AVG RYOE',
-       'Team EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA',
-       'Team 1st&10 AVG EPA', 'Team Short AVG EPA', 'Team Power AVG EPA',
-       'EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', '1st&10 AVG EPA',
-       'Short AVG EPA', 'Power AVG EPA', 'Team 1st&10 Success Rate',
-       'Team Short Conversion Rate', 'Team Power Conversion Rate',
-       '1st&10 Success Rate', 'Short Conversion Rate',
-       'Power Conversion Rate']
+       'AVG RYOE', 'EPA', 'AVG EPA', 'Success Rate', '1st&10 Snaps',
+       '1st&10 AVG RYOE', '1st&10 AVG EPA',
+       '1st&10 Success Rate', 'Short Snaps',
+       'Short AVG RYOE', 'Short AVG EPA', 'Short Conversion Rate',
+       'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
+       'Power Conversion Rate', 'Team Attempts',
+       'Team RYOE', 'Team AVG RYOE', 'Team EPA', 'Team AVG EPA',
+       'Team Success Rate', 'Team 1st&10 Attempts', 'Team 1st&10 AVG RYOE',
+       'Team 1st&10 AVG EPA', 'Team 1st&10 Success Rate',
+       'TM_short_att', 'Team Short AVG RYOE', 'Team Short AVG EPA',
+       'Team Short Conversion Rate', 'Team Power Attempts', 'Team Power AVG RYOE',
+       'Team Power AVG EPA', 'Team Power Conversion Rate'
+       ]
 
-texas =['Run Blocking Snaps',
-       'RYOE', 'AVG RYOE', '1st&10 Snaps', '1st&10 AVG RYOE', 'Short Snaps',
-       'Short AVG RYOE', 'Power Snaps', 'Power AVG RYOE', 'Team Attempts',
-       'Team RYOE', 'Team AVG RYOE', 'Team 1st&10 AVG RYOE', 'TM_short_att',
-       'Team Short AVG RYOE', 'Team Power Attempts', 'Team Power AVG RYOE',
-       'Team EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA',
-       'Team 1st&10 AVG EPA', 'Team Short AVG EPA', 'Team Power AVG EPA',
-       'EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', 'AVG EPA', '1st&10 AVG EPA',
-       'Short AVG EPA', 'Power AVG EPA', 'Team 1st&10 Success Rate',
-       'Team Short Conversion Rate', 'Team Power Conversion Rate',
-       '1st&10 Success Rate', 'Short Conversion Rate',
-       'Power Conversion Rate']
+texas=['EPA', 'Run Blocking Snaps',
+       'AVG RYOE', 'RYOE', 'AVG EPA', 'Success Rate', '1st&10 Snaps',
+       '1st&10 AVG RYOE', '1st&10 AVG EPA',
+       '1st&10 Success Rate', 'Short Snaps',
+       'Short AVG RYOE', 'Short AVG EPA', 'Short Conversion Rate',
+       'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
+       'Power Conversion Rate', 'Team Attempts',
+       'Team RYOE', 'Team AVG RYOE', 'Team EPA', 'Team AVG EPA',
+       'Team Success Rate', 'Team 1st&10 Attempts', 'Team 1st&10 AVG RYOE',
+       'Team 1st&10 AVG EPA', 'Team 1st&10 Success Rate',
+       'TM_short_att', 'Team Short AVG RYOE', 'Team Short AVG EPA',
+       'Team Short Conversion Rate', 'Team Power Attempts', 'Team Power AVG RYOE',
+       'Team Power AVG EPA', 'Team Power Conversion Rate'
+       ]
 
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
