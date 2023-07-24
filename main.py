@@ -42,10 +42,10 @@ xbox = st.selectbox('Select X Axis!', exes)
 
 for xbrick in xbox:
     if xbox == xbrick:
-       xboxx = xbrick
+        xboxx = xbrick
 for ybrick in ybox:
     if ybox == ybrick:
-       yboxx = ybrick
+        yboxx = ybrick
 
 def interactivePlot2():
     plot = px.scatter(ol_ryoe.round(decimals=2), x=xboxx, y=yboxx, color='Team',
@@ -94,8 +94,8 @@ def interactivePlot2():
                       template='simple_white')
 
     plot.update_layout(
-        xaxis_title=xbox,
-        yaxis_title=ybox,
+        xaxis_title=xboxx,
+        yaxis_title=yboxx,
         #legend_title="Name [select from table above]",
         #plot_bgcolor="rgb(0,0,0)",
         #paper_bgcolor="rgb(0,0,0)"
