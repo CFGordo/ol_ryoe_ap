@@ -47,8 +47,9 @@ xbox = st.selectbox('Select X Axis!', exes)
 games = st.slider('Run Snaps Filter', 1, 300, 100)
 ol_ryoe = ol_ryoe.loc[ol_ryoe['Run Blocking Snaps'] >= games]
 
-year = st.slider('Season Filter', 2016, 2022, (2016, 2022))
-#ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] >= year.min()]
+yearmin, yearmax = st.slider('Season Filter', 2016, 2022, (2016, 2022))
+ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] >= yearmin]
+ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] >= yearmax]
 
 for xbrick in exes:
     if xbox == xbrick:
