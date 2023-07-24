@@ -124,10 +124,12 @@ st.caption("Data= nflverse")
 st.caption("Author= @CFGordon")
 st.text("")
 st.text("")
-st.text("Definitions:")
 st.text("")
-st.caption("RYOE - Rush Yards Over Expected. My model, inputs: yardline, down, distance, # defenders in the box, "
-           "shotgun/pistol/under-center, # blockers*, rusher position['RB',QB','TE','WR']")
+st.text("Definitions:")
+st.caption("")
+st.caption("RYOE - Rush Yards Over Expected. My model; inputs: yardline, down, distance, # defenders in the box, "
+           "shotgun/pistol/under-center, # blockers*, rusher position['RB',QB','TE','WR']. >= 2min remaining in "
+           "each half. Score within 10pts.")
 st.caption("*Note: # Blockers- An educated guess based on personnel group."
            "I don't have tracking for where each player lined up.")
 st.caption("EPA - Expected Points Added.")
