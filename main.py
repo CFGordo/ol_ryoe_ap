@@ -44,7 +44,7 @@ texas=['EPA', 'Run Blocking Snaps',
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
 
-games = st.slider('Run Snaps Filter', 1, 300, 100)
+games = st.slider('Run Snaps Filter (Player)', 1, 300, 100)
 ol_ryoe = ol_ryoe.loc[ol_ryoe['Run Blocking Snaps'] >= games]
 
 yearmin, yearmax = st.slider('Season Filter', 2016, 2022, (2016, 2022))
