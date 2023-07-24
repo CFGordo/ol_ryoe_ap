@@ -49,7 +49,7 @@ ol_ryoe = ol_ryoe.loc[ol_ryoe['Run Blocking Snaps'] >= games]
 
 yearmin, yearmax = st.slider('Season Filter', 2016, 2022, (2016, 2022))
 ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] >= yearmin]
-ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] >= yearmax]
+ol_ryoe = ol_ryoe.loc[ol_ryoe['Season'] <= yearmax]
 
 for xbrick in exes:
     if xbox == xbrick:
