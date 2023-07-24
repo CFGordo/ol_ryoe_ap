@@ -40,10 +40,10 @@ texas =['Run Blocking Snaps',
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
 
-for xbrick in xbox:
+for xbrick in exes:
     if xbox == xbrick:
         xboxx = xbrick
-for ybrick in ybox:
+for ybrick in texas:
     if ybox == ybrick:
         yboxx = ybrick
 
