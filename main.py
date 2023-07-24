@@ -102,8 +102,8 @@ def interactivePlot2():
                       size_max=15,
                       trendline='ols',
                       trendline_scope='overall',
-                      hover_name=['Team'],
-                      hover_data=['Name', 'Season', 'Position', 'Run Blocking Snaps', 'Team Attempts'],
+                      hover_name='Name',
+                      hover_data=['Team', 'Season', 'Position', 'Run Blocking Snaps', 'Team Attempts'],
                       template='simple_white')
 
     plot.update_layout(
