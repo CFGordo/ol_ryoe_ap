@@ -37,12 +37,18 @@ texas =['Run Blocking Snaps',
        '1st&10 Success Rate', 'Short Conversion Rate',
        'Power Conversion Rate']
 
-xbox = st.selectbox('Select X Axis!', exes)
 ybox = st.selectbox('Select Y Axis!', texas)
+xbox = st.selectbox('Select X Axis!', exes)
 
+for xbrick in xbox:
+    if xbox == xbrick:
+       xboxx = xbrick
+for ybrick in ybox:
+    if ybox == ybrick:
+       yboxx = ybrick
 
 def interactivePlot2():
-    plot = px.scatter(ol_ryoe.round(decimals=2), x=xbox, y=ybox, color='Team',
+    plot = px.scatter(ol_ryoe.round(decimals=2), x=xboxx, y=yboxx, color='Team',
                       color_discrete_map={'ARI': '#97233F',
                                           'ATL': '#A71930',
                                           'BAL': '#241773',
