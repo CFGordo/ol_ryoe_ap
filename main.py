@@ -46,6 +46,8 @@ texas=['Team EPA', 'Team Attempts',
 gif_link = st.secrets["gif_url"]
 st.image(gif_link)
 
+logo_link = st.secrets["logo_url"]
+
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
 
@@ -80,7 +82,7 @@ def interactivePlot2():
         Team = row['Team'].replace(" ", "-")
         plot.add_layout_image(
             dict(
-                source=Image.open("./TM_logos/{Team}.png"),
+                source=Image.open(logo_link, "{Team}.png"),
                 xref="x",
                 yref="y",
                 xanchor="center",
