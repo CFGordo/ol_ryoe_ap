@@ -43,7 +43,7 @@ texas=['Team EPA', 'Team Attempts',
        'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
        'Power Conversion Rate'
        ]
-image = Image.open("C:\Users\chris\OneDrive\Documents\GitHub\ol_ryoe_ap\TM_logos\ARI.png")
+image = Image.open("C:\\Users\\chris\\OneDrive\\Documents\\GitHub\\ol_ryoe_ap\\TM_logos\\ARI.png")
 st.image(image)
 
 ybox = st.selectbox('Select Y Axis!', texas)
