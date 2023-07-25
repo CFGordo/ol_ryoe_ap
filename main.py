@@ -107,8 +107,8 @@ def interactivePlot2():
                       template='simple_white')
     plot.update_traces(marker=dict(size=1,
                                    line=dict(width=1,
-                                             color='Team',
-                                             color_discrete_map={'ARI':'#000000',
+                                             #color='Team',
+                                             color={'ARI':'#000000',
                                                                  'ATL':'#000000',
                                                                  'BAL':'#9E7C0C',
                                                                  'BUF':'#C60C30',
