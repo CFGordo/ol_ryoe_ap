@@ -78,7 +78,7 @@ def interactivePlot2():
         Team = row['Team'].replace(" ", "-")
         plot.add_layout_image(
             dict(
-                source=Image.open(f"/app/ol_ryoe_ap/TM_logos/{Team}.png"),
+                source=Image.open(f"./TM_logos/{Team}.png"),
                 xref="x",
                 yref="y",
                 xanchor="center",
