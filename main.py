@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-
+import numpy as np
+from PIL import Image
 
 st.title("🏈 🏈 OL Rush Yards Over Expected Etc. 🏈 🏈")
 st.text("")
@@ -61,89 +62,36 @@ for ybrick in texas:
         yboxx = ybrick
 
 def interactivePlot2():
-    plot = px.scatter(ol_ryoe.round(decimals=2), x=xboxx, y=yboxx, color='Team',
-                      color_discrete_map={'ARI': '#97233F',
-                                          'ATL': '#A71930',
-                                          'BAL': '#241773',
-                                          'BUF': '#00338D',
-                                          'CAR': '#0085CA',
-                                          'CHI': '#C83803',
-                                          'CIN': '#FB4F14',
-                                          'CLE': '#FF3C00',
-                                          'DAL': '#002244',
-                                          'DEN': '#002244',
-                                          'DET': '#0076B6',
-                                          'GB': '#203731',
-                                          'HOU': '#03202F',
-                                          'IND': '#a5acaf',
-                                          'JAX': '#006778',
-                                          'KC': '#E31837',
-                                          'LA': '#003594',
-                                          'LAC': '#007BC7',
-                                          'LAR': '#003594',
-                                          'LV': '#000000',
-                                          'MIA': '#008E97',
-                                          'MIN': '#4F2683',
-                                          'NE': '#C60C30',
-                                          'NO': '#D3BC8D',
-                                          'NYG': '#0B2265',
-                                          'NYJ': '#003F2D',
-                                          'OAK': '#000000',
-                                          'PHI': '#004C54',
-                                          'PIT': '#FFB612',
-                                          'SD': '#007BC7',
-                                          'SEA': '#002244',
-                                          'SF': '#AA0000',
-                                          'STL': '#003594',
-                                          'TB': '#A71930',
-                                          'TEN': '#002244',
-                                          'WAS': '#5A1414'},
-                      size='Run Blocking Snaps',
-                      size_max=15,
+    plot = px.scatter(ol_ryoe.round(decimals=2), x=xboxx, y=yboxx, #color='Team',
+                      #size='Run Blocking Snaps',
+                      #size_max=15,
                       trendline='ols',
                       trendline_scope='overall',
-                      hover_name='Name',
+                      #hover_name='Name',
                       hover_data=['Team', 'Season', 'Position', 'Run Blocking Snaps', 'Team Attempts'],
                       template='simple_white')
-    #plot.update_traces(marker=dict(size=1,
-     #                              line=dict(width=1,
-                                             #color='Team',
-      #                                       color={'ARI':'#000000',
-       #                                                          'ATL':'#000000',
-        #                                                         'BAL':'#9E7C0C',
-         #                                                        'BUF':'#C60C30',
-          #                                                       'CAR':'#000000',
-           #                                                      'CHI':'#0B162A',
-            #                                                     'CIN':'#000000',
-             #                                                    'CLE':'#311D00',
-              #                                                   'DAL':'#B0B7BC',
-               #                                                  'DEN':'#FB4F14',
-                #                                                 'DET':'#B0B7BC',
-                 #                                                'GB':'#FFB612',
-                  #                                               'HOU':'#A71930',
-                   #                                              'IND':'#002C5F',
-                    #                                             'JAX':'#000000',
-                     #                                            'KC':'#FFB612',
-                      #                                           'LA':'#FFD100',
-                       #                                          'LAC':'#ffc20e',
-                        #                                         'LAR':'#FFD100',
-                         #                                        'LV':'#A5ACAF',
-                          #                                       'MIA':'#F58220',
-                           #                                      'MIN':'#FFC62F',
-                            #                                     'NE':'#002244',
-                             #                                    'NO':'#000000',
-                              #                                   'NYG':'#A71930',
-                               #                                  'NYJ':'#000000',
-                                #                                 'OAK':'#A5ACAF',
-                                 #                                'PHI':'#A5ACAF',
-                                  #                               'PIT':'#000000',
-                                   #                              'SD':'#ffc20e',
-                                    #                             'SEA':'#69be28',
-                                     #                            'SF':'#B3995D',
-                                      #                           'STL':'#FFD100',
-                                       #                          'TB':'#322F2B',
-                                        #                         'TEN':'#4B92DB',
-                                         #                        'WAS':'#FFB612'})))
+    plot.update_traces(marker_color="rgba(0,0,0,0)")
+
+    maxDim = ol_ryoe[["Team Attempts"]].max().idxmax()
+    maxi = ol_ryoe[maxDim].max()
+    for i, row in ol_ryoe.iterrows():
+        Team = row['Team'].replace(" ", "-")
+        plot.add_layout_image(
+            dict(
+                source=Image.open(f"G:/My Drive/🏈/TM_logos{Team}.png"),
+                xref="x",
+                yref="y",
+                xanchor="center",
+                yanchor="middle",
+                x=row[xboxx],
+                y=row[yboxx],
+                sizex=np.sqrt(row["Run Blocking Snaps"] / ol_ryoe["Run Blocking Snaps"].max()) * maxi * 0.2 + maxi * 0.05,
+                sizey=np.sqrt(row["Run Blocking Snaps"] / ol_ryoe["Run Blocking Snaps"].max()) * maxi * 0.2 + maxi * 0.05,
+                sizing="contain",
+                opacity=0.8,
+                layer="above"
+            )
+        )
     plot.update_layout(
         xaxis_title=xboxx,
         yaxis_title=yboxx,
