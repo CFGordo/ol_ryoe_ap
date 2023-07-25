@@ -78,7 +78,7 @@ def interactivePlot2():
         Team = row['Team'].replace(" ", "-")
         plot.add_layout_image(
             dict(
-                source=Image.open(f"G:/My Drive/🏈/TM_logos{Team}.png"),
+                source=Image.open(f"https://drive.google.com/drive/folders/1fAynoAtIc1dlRYS3kfrzgsBZmmS4Z5vJ/{Team}.png"),
                 xref="x",
                 yref="y",
                 xanchor="center",
