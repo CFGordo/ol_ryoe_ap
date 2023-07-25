@@ -47,6 +47,7 @@ gif_link = st.secrets["gif_url"]
 st.image(gif_link)
 
 logo_link = st.secrets["logo_url"]
+st.image(logo_link, "NE.png")
 
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
