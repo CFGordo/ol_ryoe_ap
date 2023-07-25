@@ -43,7 +43,7 @@ texas=['Team EPA', 'Team Attempts',
        'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
        'Power Conversion Rate'
        ]
-image = Image.open("https://thumbs.gfycat.com/OrderlyKnobbyGoldeneye-size_restricted.gif")
+image = Image.open(r"https://thumbs.gfycat.com/OrderlyKnobbyGoldeneye-size_restricted.gif")
 st.image(image)
 
 ybox = st.selectbox('Select Y Axis!', texas)
