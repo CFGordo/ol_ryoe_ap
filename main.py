@@ -43,7 +43,8 @@ texas=['Team EPA', 'Team Attempts',
        'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
        'Power Conversion Rate'
        ]
-st.image("TM_logos/NE.png")
+image = Image.open("TM_logos/NE.png")
+st.image(image)
 
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
