@@ -43,9 +43,8 @@ texas=['Team EPA', 'Team Attempts',
        'Power Snaps', 'Power AVG RYOE', 'Power AVG EPA',
        'Power Conversion Rate'
        ]
-image_url = "https://thumbs.gfycat.com/OrderlyKnobbyGoldeneye-size_restricted.gif"
-image = Image.open(image_url)
-st.image(image)
+gif_link = st.secrets["gif_url"]
+st.image(gif_link)
 
 ybox = st.selectbox('Select Y Axis!', texas)
 xbox = st.selectbox('Select X Axis!', exes)
