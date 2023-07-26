@@ -47,6 +47,7 @@ gif_link = st.secrets["gif_url"]
 st.image(gif_link)
 
 logo_link = st.secrets["logo_url"]
+
 st.image("https://github.com/nflverse/nflverse-pbp/raw/master/squared_logos/NE.png")
 
 ybox = st.selectbox('Select Y Axis!', texas)
